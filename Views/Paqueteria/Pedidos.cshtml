@@ -1,0 +1,46 @@
+﻿
+@{
+    ViewData["Title"] = "Pedidos";
+    Layout = "~/Views/Shared/_LayoutAdministrador.cshtml";
+}
+
+<aside id="sidebar" class="sidebar">
+
+    <ul class="sidebar-nav" id="sidebar-nav">
+        <li class="nav-item">
+            <a class="nav-link " href="#">
+                <i class="bi bi-grid"></i>
+                <span>Pedidos</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link " href="#">
+                <i class="bi bi-grid"></i>
+                <span>Productos</span>
+            </a>
+        </li>
+    </ul>
+</aside>
+<main id="main" class="main">
+    <h2>Pedidos</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Fecha del pedido</th>
+                <th>No. de guía</th>
+                <th>Fecha de entrega</th>
+                <th></th> <!-- Columna para el botón -->
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>14/04/2023</td>
+                <td>123456</td>
+                <td>16/04/2023</td>
+                <td>
+                    <button type="button" class="btn btn-primary">Ver detalles</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</main>
