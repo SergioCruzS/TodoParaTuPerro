@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Sergio\\Documents\\NET Core\\TodoParaTuPerro\\TodoParaTuPerro\\TodoParaTuPerro.csproj": {}
+    "C:\\Users\\BELLO3003\\source\\repos\\GitHubTPTP\\TodoParaTuPerro\\TodoParaTuPerro.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Sergio\\Documents\\NET Core\\TodoParaTuPerro\\TodoParaTuPerro\\TodoParaTuPerro.csproj": {
+    "C:\\Users\\BELLO3003\\source\\repos\\GitHubTPTP\\TodoParaTuPerro\\TodoParaTuPerro.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Sergio\\Documents\\NET Core\\TodoParaTuPerro\\TodoParaTuPerro\\TodoParaTuPerro.csproj",
+        "projectUniqueName": "C:\\Users\\BELLO3003\\source\\repos\\GitHubTPTP\\TodoParaTuPerro\\TodoParaTuPerro.csproj",
         "projectName": "TodoParaTuPerro",
-        "projectPath": "C:\\Users\\Sergio\\Documents\\NET Core\\TodoParaTuPerro\\TodoParaTuPerro\\TodoParaTuPerro.csproj",
-        "packagesPath": "C:\\Users\\Sergio\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Sergio\\Documents\\NET Core\\TodoParaTuPerro\\TodoParaTuPerro\\obj\\",
+        "projectPath": "C:\\Users\\BELLO3003\\source\\repos\\GitHubTPTP\\TodoParaTuPerro\\TodoParaTuPerro.csproj",
+        "packagesPath": "C:\\Users\\BELLO3003\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\BELLO3003\\source\\repos\\GitHubTPTP\\TodoParaTuPerro\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Sergio\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\BELLO3003\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -64,7 +64,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }

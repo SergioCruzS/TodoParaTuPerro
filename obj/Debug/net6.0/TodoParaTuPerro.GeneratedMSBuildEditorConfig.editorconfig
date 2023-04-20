@@ -9,41 +9,77 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = TodoParaTuPerro
 build_property.RootNamespace = TodoParaTuPerro
-build_property.ProjectDir = C:\Users\Sergio\Documents\NET Core\TodoParaTuPerro\TodoParaTuPerro\
+build_property.ProjectDir = C:\Users\BELLO3003\source\repos\GitHubTPTP\TodoParaTuPerro\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\Sergio\Documents\NET Core\TodoParaTuPerro\TodoParaTuPerro
+build_property.MSBuildProjectDirectory = C:\Users\BELLO3003\source\repos\GitHubTPTP\TodoParaTuPerro
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/Sergio/Documents/NET Core/TodoParaTuPerro/TodoParaTuPerro/Views/Carrito/Index.cshtml]
+[C:/Users/BELLO3003/source/repos/GitHubTPTP/TodoParaTuPerro/Views/Administrador/Empleados.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5pc3RyYWRvclxFbXBsZWFkb3MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/BELLO3003/source/repos/GitHubTPTP/TodoParaTuPerro/Views/Carrito/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2Fycml0b1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Sergio/Documents/NET Core/TodoParaTuPerro/TodoParaTuPerro/Views/Home/Index.cshtml]
+[C:/Users/BELLO3003/source/repos/GitHubTPTP/TodoParaTuPerro/Views/Compras/Categorias.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcHJhc1xDYXRlZ29yaWFzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/BELLO3003/source/repos/GitHubTPTP/TodoParaTuPerro/Views/Compras/Compras.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcHJhc1xDb21wcmFzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/BELLO3003/source/repos/GitHubTPTP/TodoParaTuPerro/Views/Compras/HacerCompra.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcHJhc1xIYWNlckNvbXByYS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/BELLO3003/source/repos/GitHubTPTP/TodoParaTuPerro/Views/Compras/Productos.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcHJhc1xQcm9kdWN0b3MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/BELLO3003/source/repos/GitHubTPTP/TodoParaTuPerro/Views/Error/Error404.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXJyb3JcRXJyb3I0MDQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/BELLO3003/source/repos/GitHubTPTP/TodoParaTuPerro/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Sergio/Documents/NET Core/TodoParaTuPerro/TodoParaTuPerro/Views/Home/Privacy.cshtml]
+[C:/Users/BELLO3003/source/repos/GitHubTPTP/TodoParaTuPerro/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Sergio/Documents/NET Core/TodoParaTuPerro/TodoParaTuPerro/Views/Shared/Error.cshtml]
+[C:/Users/BELLO3003/source/repos/GitHubTPTP/TodoParaTuPerro/Views/Paqueteria/Pedidos.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFxdWV0ZXJpYVxQZWRpZG9zLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/BELLO3003/source/repos/GitHubTPTP/TodoParaTuPerro/Views/Paqueteria/Productos.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFxdWV0ZXJpYVxQcm9kdWN0b3MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/BELLO3003/source/repos/GitHubTPTP/TodoParaTuPerro/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Sergio/Documents/NET Core/TodoParaTuPerro/TodoParaTuPerro/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/BELLO3003/source/repos/GitHubTPTP/TodoParaTuPerro/Views/Shared/_LayoutAdministrador.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRBZG1pbmlzdHJhZG9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/BELLO3003/source/repos/GitHubTPTP/TodoParaTuPerro/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Sergio/Documents/NET Core/TodoParaTuPerro/TodoParaTuPerro/Views/_ViewImports.cshtml]
+[C:/Users/BELLO3003/source/repos/GitHubTPTP/TodoParaTuPerro/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Sergio/Documents/NET Core/TodoParaTuPerro/TodoParaTuPerro/Views/_ViewStart.cshtml]
+[C:/Users/BELLO3003/source/repos/GitHubTPTP/TodoParaTuPerro/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Sergio/Documents/NET Core/TodoParaTuPerro/TodoParaTuPerro/Views/Shared/_Layout.cshtml]
+[C:/Users/BELLO3003/source/repos/GitHubTPTP/TodoParaTuPerro/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-mtfpi8jizu

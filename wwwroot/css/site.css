@@ -39,7 +39,7 @@ body {
     top: 60px;
     left: 0;
     bottom: 0;
-    width: 300px;
+    width: 150px;
     z-index: 996;
     transition: all 0.3s;
     padding: 20px;
@@ -52,7 +52,7 @@ body {
 
 @media (max-width: 1199px) {
     .sidebar {
-        left: -300px;
+        left: -150px;
     }
 }
 
@@ -70,7 +70,7 @@ body {
 
     #main,
     #footer {
-        margin-left: 300px;
+        margin-left: 150px;
     }
 }
 
@@ -88,7 +88,7 @@ body {
     }
 
     .toggle-sidebar .sidebar {
-        left: -300px;
+        left: -150px;
     }
 }
 
