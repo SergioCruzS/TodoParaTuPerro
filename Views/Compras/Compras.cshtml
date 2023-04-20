@@ -1,0 +1,78 @@
+﻿
+@{
+    ViewData["Title"] = "Compras";
+    Layout = "~/Views/Shared/_LayoutAdministrador.cshtml";
+}
+<aside id="sidebar" class="sidebar">
+
+    <ul class="sidebar-nav" id="sidebar-nav">
+        <li class="nav-item">
+            <a class="nav-link " href="/Compras/Compras">
+                <i class="bi bi-grid"></i>
+                <span>Compras</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link " href="/Compras/Productos">
+                <i class="bi bi-grid"></i>
+                <span>Productos</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link " href="/Compras/Categorias">
+                <i class="bi bi-grid"></i>
+                <span>Categorías</span>
+            </a>
+        </li>
+    </ul>
+</aside>
+<main id="main" class="main">
+    <h2>Compras</h2>
+    <br />
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Fecha y hora de compra</th>
+                <th>Dirección de envío</th>
+                <th>Fecha y hora de entrega</th>
+                <th>Cantidad de articulos</th>
+                <th>Forma de pago</th>
+                <th>Precio Articulo</th>
+                <th>Total de la compra</th>
+                <th>Comprador</th>
+                <th>Producto</th>
+                <th>Proveedor</th>
+                <th></th> <!-- Columna para el botón -->
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>06/09/22 17:12:33</td>
+                <td>Los heroes #124</td>
+                <td>09/09/22 09:24:04</td>
+                <td>17</td>
+                <td>Paypal</td>
+                <td>500.00</td>
+                <td>8500.00</td>
+                <td>Antonio Glez</td>
+                <td>Croqueta Ganador Adulto</td>
+                <td>Alimentos para mascotas MX</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>07/09/22  12:03:20</td>
+                <td>Los heroes #124</td>
+                <td>15/09/22  16:04:00</td>
+                <td>40</td>
+                <td>Transferencia</td>
+                <td>800.00</td>
+                <td>32000.00</td>
+                <td>Angelica Ruiz</td>
+                <td>Alimento Croqueta Campeón</td>
+                <td>Purina</td>
+            </tr>
+        </tbody>
+    </table>
+</main>

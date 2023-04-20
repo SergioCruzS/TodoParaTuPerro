@@ -1,0 +1,56 @@
+﻿
+@{
+    ViewData["Title"] = "Categorias";
+    Layout = "~/Views/Shared/_LayoutAdministrador.cshtml";
+}
+<aside id="sidebar" class="sidebar">
+
+    <ul class="sidebar-nav" id="sidebar-nav">
+        <li class="nav-item">
+            <a class="nav-link " href="/Compras/Compras">
+                <i class="bi bi-grid"></i>
+                <span>Compras</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link " href="/Compras/Productos">
+                <i class="bi bi-grid"></i>
+                <span>Productos</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link " href="/Compras/Categorias">
+                <i class="bi bi-grid"></i>
+                <span>Categorías</span>
+            </a>
+        </li>
+    </ul>
+</aside>
+<main id="main" class="main">
+    <h2>Categorías</h2>
+    <br />
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Descripción</th>
+                <th></th> <!-- Columna para el botón Editar-->
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Croqueta Perros Adultos</td>
+                <td>Bolsas y costales de croquetas para perros mayores a 1 año de edad</td>
+                <td><button type="button" class="btn btn-primary">Editar</button></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Croqueta Perros Chachorros</td>
+                <td>Bolsas y costales de croquetas para perros menores a 1 año de edad</td>
+                <td><button type="button" class="btn btn-primary">Editar</button></td>
+            </tr>
+        </tbody>
+    </table>
+</main>

@@ -1,0 +1,81 @@
+﻿
+@{
+    ViewData["Title"] = "Productos";
+    Layout = "~/Views/Shared/_LayoutAdministrador.cshtml";
+}
+
+<aside id="sidebar" class="sidebar">
+
+    <ul class="sidebar-nav" id="sidebar-nav">
+        <li class="nav-item">
+            <a class="nav-link " href="/Compras/Compras">
+                <i class="bi bi-grid"></i>
+                <span>Compras</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link " href="/Compras/Productos">
+                <i class="bi bi-grid"></i>
+                <span>Productos</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link " href="/Compras/Categorias">
+                <i class="bi bi-grid"></i>
+                <span>Categorías</span>
+            </a>
+        </li>
+    </ul>
+</aside>
+<main id="main" class="main">
+    <h2>Productos</h2>
+    <br />
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Marca</th>
+                <th>Descripción</th>
+                <th>En Stock</th>
+                <th>En Inventario</th>
+                <th>Peso (kg)</th>
+                <th>Precio (mx)</th>
+                <th>Descuento</th>
+                <th>Categoría</th>     
+                <th></th> <!-- Columna para el botón Comprar -->
+                <th></th> <!-- Columna para el botón Editar-->
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Croqueta Ganador Adulto</td>
+                <td>Ganador</td>
+                <td>Hechas con proteinas de la más alta calidad....</td>
+                <td>36</td>
+                <td>42</td>
+                <td>25</td>
+                <td>915.00</td>
+                <td>0.00</td>
+                <td>Croquetas perros adultos</td>
+                <td><button type="button" class="btn btn-primary">Comprar</button></td>
+                <td><button type="button" class="btn btn-primary">Editar</button></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Alimento croqueta Campeón</td>
+                <td>Campeón</td>
+                <td>Alimento seco ideal para consentir a tu perro...</td>
+                <td>25</td>
+                <td>32</td>
+                <td>25</td>
+                <td>1299.60</td>
+                <td>0.10</td>
+                <td>Croquetas perros cachorro</td>
+                <td><button type="button" class="btn btn-primary">Comprar</button></td>
+                <td><button type="button" class="btn btn-primary">Editar</button></td>
+            </tr>
+        </tbody>
+    </table>
+</main>
