@@ -1,0 +1,59 @@
+﻿@{
+    ViewData["Title"] = "Historial Ventas";
+    Layout = "~/Views/Shared/_LayoutAdministrador.cshtml";
+}
+
+<aside id="sidebar" class="sidebar">
+
+    <ul class="sidebar-nav" id="sidebar-nav">
+        <li class="nav-item">
+            <a class="nav-link " href="#">
+                <i class="bi bi-grid"></i>
+                <span>Historial de Ventas</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link " href="#">
+                <i class="bi bi-grid"></i>
+                <span>Devoluciones</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link " href="#">
+                <i class="bi bi-grid"></i>
+                <span>Atención al Cliente</span>
+            </a>
+        </li>
+    </ul>
+</aside>
+<main id="main" class="main">
+    <h2>Ventas</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>No. de Venta</th>
+                <th>Producto</th>
+                <th>Marca</th>
+                <th>Cantidad Vendida</th>
+                <th>Fecha de envío</th>
+                <th>Estatus</th>
+                <th>Id. Cliente</th>
+                <!-- <th></th>  Columna para el botón -->
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>9875315</td>
+                <td>Croqueta cachorro</td>
+                <td>Pedigree</td>
+                <td>10</td>
+                <td>10/02/2023</td>
+                <td>En curso</td>
+                <td>1234</td>
+                <!--<td>
+                    <button type="button" class="btn btn-primary">Ver detalles</button>
+                </td>-->
+            </tr>
+        </tbody>
+    </table>
+</main>

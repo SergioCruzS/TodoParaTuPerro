@@ -1,0 +1,72 @@
+﻿@{
+    ViewData["Title"] = "Devoluciones";
+    Layout = "~/Views/Shared/_LayoutAdministrador.cshtml";
+}
+
+<aside id="sidebar" class="sidebar">
+
+    <ul class="sidebar-nav" id="sidebar-nav">
+        <li class="nav-item">
+            <a class="nav-link " href="#">
+                <i class="bi bi-grid"></i>
+                <span>Historial de Ventas</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link " href="#">
+                <i class="bi bi-grid"></i>
+                <span>Devoluciones</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link " href="#">
+                <i class="bi bi-grid"></i>
+                <span>Atención al Cliente</span>
+            </a>
+        </li>
+    </ul>
+</aside>
+<main id="main" class="main">
+    <div>
+    <h2>
+        <select name="select">
+            <option value="value1">Devoluciones finalizadas</option>
+            <option value="value2">Devoluciones en proceso</option>
+            <option value="value3">Devoluciones negadas</option>
+        </select>
+    </h2>
+
+    <label>
+        <input type="checkbox" id="cbox1" value="first_checkbox"/>
+        Productos dañados
+    </label>
+    <br />
+    </div><!---->
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id. Venta</th>
+                <th>Producto</th>
+                <th>Marca</th>
+                <th>Fecha de la venta</th>
+                <th>Id. Cliente</th>
+                <th>Detalles</th>
+                <!-- <th></th> Columna para el botón -->
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>9875315</td>
+                <td>Croqueta cachorro</td>
+                <td>Pedigree</td>
+                <td>10/02/2023</td>
+                <td>1234</td>
+                <td>
+                    <p>El producto...
+                       
+                    </p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</main>

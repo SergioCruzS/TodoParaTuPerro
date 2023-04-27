@@ -1,0 +1,53 @@
+﻿@{
+    ViewData["Title"] = "Atención al Cliente";
+    Layout = "~/Views/Shared/_LayoutAdministrador.cshtml";
+}
+
+<aside id="sidebar" class="sidebar">
+
+    <ul class="sidebar-nav" id="sidebar-nav">
+        <li class="nav-item">
+            <a class="nav-link " href="#">
+                <i class="bi bi-grid"></i>
+                <span>Historial de Ventas</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link " href="#">
+                <i class="bi bi-grid"></i>
+                <span>Devoluciones</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link " href="#">
+                <i class="bi bi-grid"></i>
+                <span>Atención al Cliente</span>
+            </a>
+        </li>
+    </ul>
+</aside>
+<main id="main" class="main">
+    <h2>Pendientes de Atención al Cliente</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id. Cliente</th>
+                <th>Nombre</th>
+                <th>Correo</th>
+                <th>Teléfono</th>
+                <!-- <th></th>  Columna para el botón -->
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1234</td>
+                <td>Ian Blas</td>
+                <td>ejemplo.correo@dominio.com</td>
+                <td>722-428-1878</td>
+                <!--<td>
+                    <button type="button" class="btn btn-primary">Ver detalles</button>
+                </td>-->
+            </tr>
+        </tbody>
+    </table>
+</main>
