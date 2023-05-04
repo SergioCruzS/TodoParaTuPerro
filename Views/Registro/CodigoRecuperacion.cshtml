@@ -1,0 +1,37 @@
+﻿
+@{
+    ViewData["Title"] = "CodigoRecuperacion";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    .fondoInicio {
+        background-color: #C7ECF0;
+    }
+</style>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Validar código</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5 fondoInicio">
+        <h1 class="text-center mb-4">Validar código</h1>
+        <form>
+            <div class="form-group">
+                <label for="code">Código:</label>
+                <input type="text" class="form-control" id="code" placeholder="Ingrese el código recibido por correo electrónico">
+            </div>
+            <button type="submit" class="btn btn-primary">
+                <a class="text-white" asp-area="" asp-controller="Registro" asp-action="CambiarContraseña">Validar</a>
+            </button>
+        </form>
+    </div>
+</body>
+</html>
+
+

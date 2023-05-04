@@ -1,0 +1,38 @@
+﻿
+@{
+    ViewData["Title"] = "MensajeDeCambio";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cambio de contraseña exitoso</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        .success-message {
+            background-color: #d4edda;
+            border-color: #c3e6cb;
+            color: #155724;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border-radius: .25rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="success-message">
+            <h3>Cambio de contraseña exitoso</h3>
+            <p>Su contraseña ha sido cambiada correctamente.</p>
+            <button type="button" class="btn btn-primary">
+                <a class="text-white" asp-area="" asp-controller="Registro" asp-action="IniciarSesion">Iniciar Sesión</a>
+            </button>
+        </div>
+    </div>
+</body>
+</html>
+
+

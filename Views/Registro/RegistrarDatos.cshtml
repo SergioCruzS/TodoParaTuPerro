@@ -1,0 +1,87 @@
+﻿
+@{
+    ViewData["Title"] = "Registrado";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    .fondoInicio {
+        background-color: #C7ECF0;
+    }
+</style>
+
+<div class="container mt-1 fondoInicio">
+  <h2 class="text-center mb-4">Registro de Datos</h2>
+  <form>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="mb-3">
+          <label for="nombre" class="form-label">Nombre</label>
+          <input type="text" class="form-control" id="nombre" name="nombre" required>
+        </div>
+        <div class="mb-3">
+          <label for="apellido" class="form-label">Apellido</label>
+          <input type="text" class="form-control" id="apellido" name="apellido" required>
+        </div>
+        <div class="mb-3">
+          <label for="sexo" class="form-label">Sexo</label>
+          <select class="form-select" id="sexo" name="sexo" required>
+            <option value="">Seleccionar</option>
+            <option value="masculino">Masculino</option>
+            <option value="femenino">Femenino</option>
+            <option value="otro">Otro</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label for="telefono" class="form-label">Teléfono</label>
+          <input type="tel" class="form-control" id="telefono" name="telefono" required>
+        </div>
+        <div class="mb-3">
+          <label for="fecha-nacimiento" class="form-label">Fecha de Nacimiento</label>
+          <input type="date" class="form-control" id="fecha-nacimiento" name="fecha-nacimiento" required>
+        </div>
+      </div>
+
+
+
+      <div class="col-md-6">
+          <div class="mb-3">
+             <label for="direccion" class="form-label">Dirección</label>
+             <textarea class="form-control" id="direccion" name="direccion" rows="1" required></textarea>
+          </div>
+        <div class="mb-3">
+          <label for="num-tarjeta" class="form-label">Número de Tarjeta</label>
+          <input type="text" class="form-control" id="num-tarjeta" name="num-tarjeta" required>
+        </div>
+        <div class="mb-3">
+          <label for="cvv" class="form-label">CVV</label>
+          <input type="text" class="form-control" id="cvv" name="cvv" required>
+        </div>
+        <div class="mb-3">
+          <label for="caducidad" class="form-label">Caducidad de la Tarjeta</label>
+          <input type="month" class="form-control" id="caducidad" name="caducidad" required>
+        </div>
+        <div class="mb-3">
+          <label for="estado" class="form-label">Estado</label>
+          <select class="form-select" id="estado" name="estado" required>
+            <option value="">Seleccionar</option>
+            <option value="CDMX">CDMX</option>
+            <option value="Jalisco">Jalisco</option>
+            <option value="Nuevo León">Nuevo León</option>
+            <option value="Guerrero">Guerrero</option>
+          </select>
+        </div>
+      </div>
+
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-6 text-center">
+                <button type="submit" class="btn btn-primary">Registrar Datos</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+
+
+

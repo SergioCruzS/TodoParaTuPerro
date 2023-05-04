@@ -1,0 +1,39 @@
+﻿
+@{
+    ViewData["Title"] = "OlvidarContraseña";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<style>
+    .fondoInicio {
+        background-color: #C7ECF0;
+    }
+</style>
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Recuperar contraseña</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5 fondoInicio">
+        <h1 class="mb-4 text-center">Recuperar contraseña</h1>
+        <form>
+            <div class="form-group">
+                <label for="email">Correo electrónico:</label>
+                <input type="email" class="form-control" id="email" placeholder="Ingrese su correo electrónico">
+            </div>
+            <button type="submit" class="btn btn-primary">
+                <a class="text-white" asp-area="" asp-controller="Registro" asp-action="CodigoRecuperacion">Recuperar</a>
+            </button>
+            <button type="button" class="btn btn-secondary">
+                <a class="text-white" asp-area="" asp-controller="Registro" asp-action="IniciarSesion">Cancelar</a>
+            </button>
+        </form>
+    </div>
+</body>
+</html>
