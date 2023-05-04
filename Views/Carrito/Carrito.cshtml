@@ -1,0 +1,121 @@
+﻿
+@{
+    ViewData["Title"] = "Carrito";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Carrito de compra</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1>Carrito de compra</h1>
+        <hr>
+
+        <ul class="list-group">
+            <li class="list-group-item">
+                <div class="row">
+                    <div class="col-2">
+                        <img src="https://via.placeholder.com/150x150.png" alt="Producto 1" class="img-fluid">
+                    </div>
+                    <div class="col-3">
+                        <h4>Producto 1</h4>
+                        <p>Cantidad disponible: 10</p>
+                    </div>
+                    <div class="col-2">
+                        <button class="btn btn-secondary" onclick="restarProducto()">-</button>
+                        <span id="cantidad-productos">0</span>
+                        <button class="btn btn-primary" onclick="agregarProducto()">+</button>
+                    </div>
+                    <div class="col-2">
+                        <p>$10.00</p>
+                    </div>
+                    <div class="col-2">
+                        <button class="btn btn-danger">Eliminar</button>
+                        <button class="btn btn-success mt-2">Comprar ahora</button>
+                    </div>
+                </div>
+            </li>
+            <!-- Repetir este bloque li por cada producto que se agregue al carrito -->
+        </ul>
+
+        <ul class="list-group">
+            <li class="list-group-item">
+                <div class="row">
+                    <div class="col-2">
+                        <img src="https://via.placeholder.com/150x150.png" alt="Producto 2" class="img-fluid">
+                    </div>
+                    <div class="col-3">
+                        <h4>Producto 2</h4>
+                        <p>Cantidad disponible: 5</p>
+                    </div>
+                    <div class="col-2">
+                        <button class="btn btn-secondary" onclick="restarProducto1()">-</button>
+                        <span id="cantidad-productos1">0</span>
+                        <button class="btn btn-primary" onclick="agregarProducto1()">+</button>
+                    </div>
+                    <div class="col-2">
+                        <p>$20.00</p>
+                    </div>
+                    <div class="col-2">
+                        <button class="btn btn-danger">Eliminar</button>
+                        <button class="btn btn-success mt-2">Comprar ahora</button>
+                    </div>
+                </div>
+            </li>
+            <!-- Repetir este bloque li por cada producto que se agregue al carrito -->
+        </ul>
+
+        
+
+        <hr>
+        <div class="text-right">
+            <h5>Total: $30.00</h5>
+            <button class="btn btn-primary">Comprar carrito</button>
+        </div>
+    </div>
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- JavaScript personalizado -->
+    <script>
+        var cantidadProductos = 0;
+
+        function agregarProducto() {
+            cantidadProductos++;
+            $("#cantidad-productos").text(cantidadProductos);
+        }
+
+        function restarProducto() {
+            if (cantidadProductos > 0) {
+                cantidadProductos--;
+                $("#cantidad-productos").text(cantidadProductos);
+            }
+        }
+
+        var cantidadProductos1 = 0;
+
+        function agregarProducto1() {
+            cantidadProductos1++;
+            $("#cantidad-productos1").text(cantidadProductos1);
+        }
+
+        function restarProducto1() {
+            if (cantidadProductos1 > 0) {
+                cantidadProductos1--;
+                $("#cantidad-productos1").text(cantidadProductos1);
+            }
+        }
+
+
+    </script>
+</body>
+</html>
+
+
+

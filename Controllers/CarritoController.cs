@@ -4,7 +4,7 @@ namespace TodoParaTuPerro.Controllers
 {
     public class CarritoController : Controller
     {
-        public IActionResult Index()
+        public IActionResult Carrito()
         {
             return View();
         }
