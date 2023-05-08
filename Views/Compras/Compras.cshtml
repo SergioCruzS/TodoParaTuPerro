@@ -28,6 +28,60 @@
 </aside>
 <main id="main" class="main">
     <br />
+    <div class="text-center">
+        <h1 class="display-4">Registros de compras</h1>
+        <br />
+        <div>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>FechaCompra</th>
+                        <th>DireccionEnvio</th>
+                        <th>FechaEntrega</th>
+                        <th>CantidadArticulos</th>
+                        <th>FormaPago</th>
+                        <th>PrecioArticulo</th>
+                        <th>TotalCompra</th>
+                        <th>NumAutorizacion</th>
+                        <th>Id_empleado</th>
+                        <th>Id_producto</th>
+                        <th>Id_proveedor</th>
+                    </tr>
+                </thead>
+                @{
+                    //Validacion para verificar que el ViewBag tenga datos
+                    if (ViewBag.Compras != null)
+                    {
+                        //Generar las filas por cada compra de la tabla
+                        foreach (var item in ViewBag.Compras)
+                        {
+                            <tr>
+                                <td>@item.Id_compra</td>
+                                <td>@item.FechaCompra </td>
+                                <td>@item.DireccionEnvio </td>
+                                <td>@item.FechaEntrega </td>
+                                <td>@item.CantidadArticulos </td>
+                                <td>@item.FormaPago  </td>
+                                <td>@item.PrecioArticulo  </td>
+                                <td>@item.TotalCompra  </td>
+                                <td>@item.NumAutorizacion </td>
+                                <td>@item.Id_empleado  </td>
+                                <td>@item.Id_producto  </td>
+                                <td>@item.Id_proveedor  </td>
+                            </tr>
+                        }
+                    }
+                }
+            </table>
+        </div>
+    </div>
+
+</main>
+
+@*
+<main id="main" class="main">
+    <br />
     <h2>Compras</h2>
     <br />
     <table class="table">
@@ -77,3 +131,4 @@
         </tbody>
     </table>
 </main>
+*@

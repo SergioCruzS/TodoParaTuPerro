@@ -1,4 +1,4 @@
-﻿
+﻿@model ProductosModel
 @{
     ViewData["Title"] = "Productos";
     Layout = "~/Views/Shared/_LayoutAdministrador.cshtml";
@@ -29,6 +29,58 @@
 </aside>
 <main id="main" class="main">
     <br />
+    <div class="text-center">
+        <h2>Lista de Productos</h2>
+        <a href="/Compras/AgregarProducto">  <button type="button" class="btn btn-primary" style="position:absolute; margin-left:400px;">Añadir Producto</button>  </a>
+        <br />
+        <div>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Nombre</th>
+                        <th>Marca</th>
+                        <th>Descripción</th>
+                        <th>Imagen</th>
+                        <th>Stock</th>
+                        <th>Inventario</th>
+                        <th>Peso</th>
+                        <th>Precio</th>
+                        <th>Descuento</th>
+                        <th>Id_categoria</th>
+                    </tr>
+                </thead>
+                @{
+                    //Validacion para verificar que el ViewBag tenga datos
+                    if (ViewBag.Productos != null)
+                    {
+                        //Generar las filas por cada producto de la tabla
+                        foreach (var item in ViewBag.Productos)
+                        {
+                            <tr>
+                                <td>@item.Id_producto</td>
+                                <td>@item.Nombre</td>
+                                <td>@item.Marca</td>
+                                <td>@item.Descripcion</td>
+                                <td>@item.Imagen</td>
+                                <td>@item.Stock</td>
+                                <td>@item.Inventario</td>
+                                <td>@item.Peso</td>
+                                <td>@item.Precio</td>
+                                <td>@item.Descuento</td>
+                                <td>@item.Id_categoria</td>
+                            </tr>
+                        }
+                    }
+                }
+            </table>
+        </div>
+    </div>
+</main>
+
+@*
+    <main id="main" class="main">
+    <br />
     <h2>Productos</h2>
     <input type="search" class="search" style="margin-left:300px" placeholder="Buscar" />
     <button type="button" class="btn btn-primary" style="position:absolute; margin-left:400px;">Añadir Producto</button>
@@ -46,7 +98,7 @@
                 <th>Peso (kg)</th>
                 <th>Precio (mx)</th>
                 <th>Descuento</th>
-                <th>Categoría</th>     
+                <th>Categoría</th>
                 <th></th> <!-- Columna para el botón Comprar -->
                 <th></th> <!-- Columna para el botón Editar-->
             </tr>
@@ -83,3 +135,4 @@
         </tbody>
     </table>
 </main>
+*@

@@ -1,10 +1,83 @@
-﻿
+﻿@model ComprasModel
 @{
     ViewData["Title"] = "HacerCompra";
     Layout = "~/Views/Shared/_LayoutAdministrador.cshtml";
 }
 
 <main id="main" class="main">
+    <br />
+    <h1>Realizar compra</h1>
+    <form method="post" class="form-floating">
+        <div class="form-group">
+            <label asp-for="FechaCompra"></label>
+            <input class="form-control" asp-for=FechaCompra />
+        </div>
+
+        <div class="form-group">
+            <label asp-for="DireccionEnvio"></label>
+            <input class="form-control" asp-for=DireccionEnvio />
+        </div>
+
+        <div class="form-group">
+            <label asp-for="FechaEntrega"></label>
+            <input class="form-control" asp-for=FechaEntrega />
+        </div>
+        <div class="form-group">
+            <label asp-for="CantidadArticulos"></label>
+            <input class="form-control" asp-for=CantidadArticulos />
+        </div>
+
+        <div class="form-group">
+            <label asp-for="FormaPago"></label>
+            <input class="form-control" asp-for=FormaPago />
+        </div>
+
+        <div class="form-group">
+            <label asp-for="PrecioArticulo"></label>
+            <input class="form-control" asp-for=PrecioArticulo />
+        </div>
+                <div class="form-group">
+            <label asp-for="TotalCompra"></label>
+            <input class="form-control" asp-for=TotalCompra />
+        </div>
+
+        <div class="form-group">
+            <label asp-for="NumAutorizacion"></label>
+            <input class="form-control" asp-for=NumAutorizacion />
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Id_empleado"></label>
+            <input class="form-control" asp-for=Id_empleado />
+        </div>
+        <div class="form-group">
+            <label asp-for="Id_producto"></label>
+            <input class="form-control" asp-for=Id_producto />
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Id_proveedor"></label>
+            <input class="form-control" asp-for=Id_proveedor />
+        </div>
+
+        <br />
+        <div class="text-center panel-body">
+            <button type="submit" class="btn btn-sm btn-primary">Pagar</button>
+        </div>
+    </form>
+
+
+</main>
+
+
+
+
+
+
+
+
+
+@*<main id="main" class="main">
     <br />
     <h2>Nueva Compra</h2>
     <button type="button" class="btn btn-primary" style="position:absolute; margin-left:800px;">Cancelar</button>
@@ -68,4 +141,4 @@
 
     <button type="button" class="btn btn-primary" style="margin-left:600px;">Pagar</button>
 
-</main>
+</main>*@
