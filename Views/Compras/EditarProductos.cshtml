@@ -1,0 +1,50 @@
+﻿@model ProductosModel
+@{
+    ViewData["Title"] = "EditarProducto";
+}
+<a class="btn btn-outline-dark" type="button" asp-controller="Compras" asp-action="Productos">Volver</a>
+<br />
+<br />
+<form enctype="multipart/form-data" class="container-fluid" method="post">
+    <input hidden asp-for="Id_producto" />
+
+    <label clas="form-label">Nombre:</label>
+    <input required type="text" class="form-control" asp-for="Nombre" />
+
+    <label clas="form-label">Marca:</label>
+    <input required type="text" class="form-control" asp-for="Marca" />
+
+    <label clas="form-label">Descripcion:</label>
+    <input required type="text" class="form-control" asp-for="Descripcion" />
+
+    <label clas="form-label">Imagen:</label>
+    <input required type="text" class="form-control" asp-for="Imagen" />
+
+    <label clas="form-label">Stock:</label>
+    <input required type="text" class="form-control" asp-for="Stock" />
+
+    <label clas="form-label">Inventario:</label>
+    <input required type="text" class="form-control" asp-for="Inventario" />
+
+    <label clas="form-label">Peso:</label>
+    <input required type="text" class="form-control" asp-for="Peso" />
+
+    <label clas="form-label">Precio de venta:</label>
+    <input required type="text" class="form-control" asp-for="PrecioVenta" />
+
+    <label clas="form-label">Precio de compra:</label>
+    <input required type="text" class="form-control" asp-for="PrecioCompra" />
+
+    <label clas="form-label">Descuento:</label>
+    <input required type="text" class="form-control" asp-for="Descuento" />
+
+    <label clas="form-label">Id_categoria:</label>
+    <input required type="text" class="form-control" asp-for="Id_categoria" />
+
+    <br />
+
+    <button type="submit" class="btn btn-success">Actualizar</button>
+
+</form>
+
+<label class="alert-danger">@ViewBag.error</label>

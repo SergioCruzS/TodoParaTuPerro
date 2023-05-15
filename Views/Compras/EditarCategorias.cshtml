@@ -1,0 +1,22 @@
+﻿@model CategoriasModel
+@{
+    ViewData["Title"] = "EditarProducto";
+}
+<a class="btn btn-outline-dark" type="button" asp-controller="Compras" asp-action="Categorias">Volver</a>
+<br />
+<br />
+<form enctype="multipart/form-data" class="container-fluid" method="post">
+    <input hidden asp-for="Id_categoria" />
+
+    <label clas="form-label">Nombre:</label>
+    <input required type="text" class="form-control" asp-for="Nombre" />
+
+    <label clas="form-label">Descripcion:</label>
+    <input required type="text" class="form-control" asp-for="Descripcion" />
+    <br />
+
+    <button type="submit" class="btn btn-success">Actualizar</button>
+
+</form>
+
+<label class="alert-danger">@ViewBag.error</label>

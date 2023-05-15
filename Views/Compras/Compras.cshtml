@@ -1,4 +1,4 @@
-﻿
+﻿@model ComprasModel
 @{
     ViewData["Title"] = "Compras";
     Layout = "~/Views/Shared/_LayoutAdministrador.cshtml";
@@ -24,29 +24,35 @@
                 <span>Categorías</span>
             </a>
         </li>
+        <li class="nav-item">
+            <a class="nav-link " href="/Compras/Proveedores">
+                <i class="bi bi-grid"></i>
+                <span>Proveedores</span>
+            </a>
+        </li>
     </ul>
 </aside>
-<main id="main" class="main">
+<main id="main" class="main" style="margin-left:10%">
     <br />
+    <h2 style="margin-left:4%">Registros de compras</h2>
     <div class="text-center">
-        <h1 class="display-4">Registros de compras</h1>
         <br />
         <div>
             <table class="table">
                 <thead>
                     <tr>
                         <th>Id</th>
-                        <th>FechaCompra</th>
-                        <th>DireccionEnvio</th>
-                        <th>FechaEntrega</th>
-                        <th>CantidadArticulos</th>
-                        <th>FormaPago</th>
-                        <th>PrecioArticulo</th>
-                        <th>TotalCompra</th>
-                        <th>NumAutorizacion</th>
-                        <th>Id_empleado</th>
-                        <th>Id_producto</th>
-                        <th>Id_proveedor</th>
+                        <th>Fecha de compra</th>
+                        <th>Direccion de envio</th>
+                        <th>Fecha de entrega</th>
+                        <th>Cantidad de articulos</th>
+                        <th>Forma de pago</th>
+                        <th>Precio del articulo</th>
+                        <th>Total de Compra</th>
+                        <th>Numero de autorizacion</th>
+                        <th>Id Empleado</th>
+                        <th>Id Producto</th>
+                        <th>Id Proveedor</th>
                     </tr>
                 </thead>
                 @{

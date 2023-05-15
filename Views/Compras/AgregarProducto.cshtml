@@ -7,56 +7,91 @@
 <main id="main" class="main">
     <br />
     <h1>Ingresa la información del nuevo producto</h1>
+    <br />
+    @* @Html.ValidationSummary() Para lanzar los Mensajes de error en automático y en una lista sin ponerlos en los <span>  *@
     <form method="post" class="form-floating">
         <div class="form-group">
-            <label asp-for="Nombre"></label>
-            <input class="form-control" asp-for=Nombre/>
+            <label>Nombre</label>
+            <input  class="form-control" asp-for=Nombre />
+            <span asp-validation-for="Nombre" class="text-danger"> </span>
         </div>
+        <br />
 
         <div class="form-group">
             <label asp-for="Marca"></label>
-            <input class="form-control" asp-for=Marca/>
+            <input  class="form-control" asp-for=Marca />
+            <span asp-validation-for="Marca" class="text-danger"> </span>
         </div>
+        <br />
 
         <div class="form-group">
             <label asp-for="Descripcion"></label>
-            <input class="form-control" asp-for=Descripcion/>
+            <input  class="form-control" asp-for=Descripcion />
+            <span asp-validation-for="Descripcion" class="text-danger"> </span>
         </div>
-        <div class="form-group">
-            <label asp-for="Imagen"></label>
-            <input class="form-control" asp-for=Imagen/>
-        </div>
+        <br />
 
         <div class="form-group">
-            <label asp-for="Stock"></label>
-            <input class="form-control" asp-for=Stock/>
+            <label asp-for="Imagen">Ruta de Imagen</label>
+            <input  class="form-control" asp-for=Imagen />
+            <span asp-validation-for="Imagen" class="text-danger"> </span>
         </div>
+        <br />
 
         <div class="form-group">
-            <label asp-for="Inventario"></label>
-            <input class="form-control" asp-for=Inventario />
+            <label asp-for="Stock">En Stock</label>
+            <input  class="form-control" asp-for=Stock />
+            <span asp-validation-for="Stock" class="text-danger"> </span>
         </div>
+        <br />
+
+        <div class="form-group">
+            <label asp-for="Inventario">En inventario</label>
+            <input  class="form-control" asp-for=Inventario />
+            <span asp-validation-for="Inventario" class="text-danger"> </span>
+        </div>
+        <br />
+
         <div class="form-group">
             <label asp-for="Peso"></label>
-            <input class="form-control" asp-for=Peso/>
+            <input  class="form-control" asp-for=Peso/>
+            <span asp-validation-for="Peso" class="text-danger"> </span>
         </div>
+        <br />
+
 
         <div class="form-group">
-            <label asp-for="Precio"></label>
-            <input class="form-control" asp-for=Precio/>
+            <label asp-for="PrecioVenta">Precio de Venta</label>
+            <input class="form-control" asp-for=PrecioVenta />
+            <span asp-validation-for="PrecioVenta" class="text-danger"> </span>
         </div>
+        <br />
+
+        <div class="form-group">
+            <label asp-for="PrecioCompra">Precio de Compra</label>
+            <input  class="form-control" asp-for=PrecioCompra />
+            <span asp-validation-for="PrecioCompra" class="text-danger"> </span>
+        </div>
+        <br />
 
         <div class="form-group">
             <label asp-for="Descuento"></label>
-            <input class="form-control" asp-for=Descuento/>
-        </div>
-        <div class="form-group">
-            <label asp-for="Id_categoria"></label>
-            <input class="form-control" asp-for=Id_categoria/>
+            <input class="form-control" asp-for=Descuento />
+            <span asp-validation-for="Descuento" class="text-danger"> </span>
+
         </div>
         <br />
+
+        <div class="form-group">
+            <label asp-for="Id_categoria">ID Categoría</label>
+            <input  class="form-control" asp-for=Id_categoria />
+            <span asp-validation-for="Id_categoria" class="text-danger"> </span>
+        </div>
+        <br />
+
+        <br />
         <div class="text-center panel-body">
-            <button type="submit" class="btn btn-sm btn-primary">Pagar</button>
+            <button type="submit" class="btn btn-sm btn-primary">Añadir</button>
         </div>
     </form>
 

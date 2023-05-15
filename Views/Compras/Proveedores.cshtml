@@ -1,0 +1,70 @@
+﻿@model ProveedoresModel
+@{
+    ViewData["Title"] = "Proveedores";
+    Layout = "~/Views/Shared/_LayoutAdministrador.cshtml";
+}
+<aside id="sidebar" class="sidebar">
+
+    <ul class="sidebar-nav" id="sidebar-nav">
+        <li class="nav-item">
+            <a class="nav-link " href="/Compras/Compras">
+                <i class="bi bi-grid"></i>
+                <span>Compras</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link " href="/Compras/Productos">
+                <i class="bi bi-grid"></i>
+                <span>Productos</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link " href="/Compras/Categorias">
+                <i class="bi bi-grid"></i>
+                <span>Categorías</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link " href="/Compras/Proveedores">
+                <i class="bi bi-grid"></i>
+                <span>Proveedores</span>
+            </a>
+        </li>
+    </ul>
+</aside>
+
+<main id="main" class="main" style="margin-left:3%">
+    <br />
+    <h2 style="margin-left:3%">Proveedores</h2>
+    <div class="text-center">
+        <br />
+        <div>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Nombre</th>
+                        <th>Direccion</th>
+                    </tr>
+                </thead>
+                @{
+                    //Validacion para verificar que el ViewBag tenga datos
+                    if (ViewBag.Proveedores != null)
+                    {
+                        //Generar las filas por cada compra de la tabla
+                        foreach (var item in ViewBag.Proveedores)
+                        {
+                            <tr>
+                                <td>@item.Id_proveedor</td>
+                                <td>@item.Nombre </td>
+                                <td>@item.Direccion </td>
+                            </tr>
+
+
+                        }
+                    }
+                }
+            </table>
+        </div>
+    </div>
+</main>

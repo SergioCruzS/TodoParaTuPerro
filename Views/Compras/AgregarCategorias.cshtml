@@ -1,0 +1,32 @@
+﻿@model CategoriasModel
+@{
+    ViewData["Title"] = "Añadir Categoría";
+    Layout = "~/Views/Shared/_LayoutAdministrador.cshtml";
+}
+
+<main id="main" class="main">
+    <br />
+    <h1>Ingresa la información de la nueva categoría</h1>
+    <br />
+    <form method="post" class="form-floating">
+        <div class="form-group">
+            <label asp-for="Nombre"></label>
+            <input class="form-control" asp-for=Nombre />
+            <span asp-validation-for="Nombre" class="text-danger"> </span>
+        </div>
+        <br />
+
+        <div class="form-group">
+            <label asp-for="Descripcion"></label>
+            <input class="form-control" asp-for=Descripcion />
+            <span asp-validation-for="Descripcion" class="text-danger"> </span>
+        </div>
+
+        <br />
+        <div class="text-center panel-body">
+            <button type="submit" class="btn btn-sm btn-primary">Añadir</button>
+        </div>
+    </form>
+
+
+</main>

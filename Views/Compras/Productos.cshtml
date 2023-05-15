@@ -25,13 +25,26 @@
                 <span>Categorías</span>
             </a>
         </li>
+        <li class="nav-item">
+            <a class="nav-link " href="/Compras/Proveedores">
+                <i class="bi bi-grid"></i>
+                <span>Proveedores</span>
+            </a>
+        </li>
     </ul>
 </aside>
-<main id="main" class="main">
+<main id="main" class="main" style="margin-left:3%; margin-right:3%">
     <br />
+    <h2 style="margin-left:4%">Lista de Productos</h2>
     <div class="text-center">
-        <h2>Lista de Productos</h2>
+        @using (Html.BeginForm("Buscar","Compras"))
+        {
+                    <h4>Buscar producto: </h4> @Html.TextBox("buscar",null) <input type="submit" name="name" value="Buscar" />
+        }
+
         <a href="/Compras/AgregarProducto">  <button type="button" class="btn btn-primary" style="position:absolute; margin-left:400px;">Añadir Producto</button>  </a>
+        <br />
+        <br />
         <br />
         <div>
             <table class="table">
@@ -45,9 +58,10 @@
                         <th>Stock</th>
                         <th>Inventario</th>
                         <th>Peso</th>
-                        <th>Precio</th>
+                        <th>Precio de Venta</th>
+                        <th>Precio de Compra</th>
                         <th>Descuento</th>
-                        <th>Id_categoria</th>
+                        <th>Id Categoria</th>
                     </tr>
                 </thead>
                 @{
@@ -66,9 +80,20 @@
                                 <td>@item.Stock</td>
                                 <td>@item.Inventario</td>
                                 <td>@item.Peso</td>
-                                <td>@item.Precio</td>
+                                <td>@item.PrecioVenta</td>
+                                <td>@item.PrecioCompra</td>
                                 <td>@item.Descuento</td>
                                 <td>@item.Id_categoria</td>
+
+                                <td>
+                                    <a asp-action="EditarProductos" class="btn btn-warning" asp-route-id="@item.Id_producto">Edit</a>
+                                </td>
+                                <td>
+                                    <a asp-action="EliminarProductos" class="btn btn-danger" asp-route-id="@item.Id_producto">Delete</a>
+                                </td>
+                                <td>
+                                    <a asp-action="ComprarProductos" class="btn btn-secondary" asp-route-id="@item.Id_producto">Comprar</a>
+                                </td>
                             </tr>
                         }
                     }
