@@ -1,0 +1,34 @@
+﻿@model UsuarioModel
+@{
+    Layout = "~/Views/Shared/_LayoutAdministrador.cshtml";;
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" /> @*Import de librerias de Bootstrap*@
+</head>
+<body>
+    <div class="row mt-5">
+        @*Fila con Margin Top (mt) de 5*@
+        <div class="col-sm-4 offset-sm-4">
+            <form asp-controller="Login" asp-action="Index" method="post">
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Correo</label>
+                    <input type="email" class="form-control" asp-for="Correo" placeholder="Ingrese su correo">
+                </div>
+                <br />
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Contraseña</label>
+                    <input type="password" class="form-control" asp-for="Clave" placeholder="Ingrese su contraseña">
+                </div>
+                <br />
+                <button type="submit" class="btn btn-primary">Ingresar</button>
+            </form>
+        </div>
+    </div>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script> @*Import de librerias de Bootstrap*@
+</body>
+</html>

@@ -37,12 +37,12 @@
     <br />
     <h2 style="margin-left:4%">Lista de Productos</h2>
     <div class="text-center">
-        @using (Html.BeginForm("Buscar","Compras"))
+        @using (Html.BeginForm("Buscar","Productos"))
         {
                     <h4>Buscar producto: </h4> @Html.TextBox("buscar",null) <input type="submit" name="name" value="Buscar" />
         }
 
-        <a href="/Compras/AgregarProducto">  <button type="button" class="btn btn-primary" style="position:absolute; margin-left:400px;">Añadir Producto</button>  </a>
+        <a href="/Productos/AgregarProducto">  <button type="button" class="btn btn-primary" style="position:absolute; margin-left:400px;">Añadir Producto</button>  </a>
         <br />
         <br />
         <br />

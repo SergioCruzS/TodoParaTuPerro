@@ -34,9 +34,10 @@ namespace TodoParaTuPerro.Models
         public float PrecioVenta { get; set; }
 
         [Range(1, 99999, ErrorMessage = "Precio no valido")]
+
         public float PrecioCompra { get; set; }
 
-        [Range(0,1, ErrorMessage = "Descuento no valido")]
+        //[Range(0,1, ErrorMessage = "Descuento no valido")]
         public float Descuento { get; set; }
 
         //[Required(ErrorMessage = "Escriba el ID de la categoría del producto")]

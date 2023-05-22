@@ -24,52 +24,32 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2Fycml0b1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/BELLO3003/source/repos/GitHubTPTP/TodoParaTuPerro/Views/Compras/AgregarCategorias.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcHJhc1xBZ3JlZ2FyQ2F0ZWdvcmlhcy5jc2h0bWw=
+[C:/Users/BELLO3003/source/repos/GitHubTPTP/TodoParaTuPerro/Views/Categorias/AgregarCategorias.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmlhc1xBZ3JlZ2FyQ2F0ZWdvcmlhcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/BELLO3003/source/repos/GitHubTPTP/TodoParaTuPerro/Views/Compras/AgregarProducto.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcHJhc1xBZ3JlZ2FyUHJvZHVjdG8uY3NodG1s
+[C:/Users/BELLO3003/source/repos/GitHubTPTP/TodoParaTuPerro/Views/Categorias/Categorias.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmlhc1xDYXRlZ29yaWFzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/BELLO3003/source/repos/GitHubTPTP/TodoParaTuPerro/Views/Compras/Categorias.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcHJhc1xDYXRlZ29yaWFzLmNzaHRtbA==
+[C:/Users/BELLO3003/source/repos/GitHubTPTP/TodoParaTuPerro/Views/Categorias/EditarCategorias.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmlhc1xFZGl0YXJDYXRlZ29yaWFzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/BELLO3003/source/repos/GitHubTPTP/TodoParaTuPerro/Views/Categorias/EliminarCategorias.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmlhc1xFbGltaW5hckNhdGVnb3JpYXMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/BELLO3003/source/repos/GitHubTPTP/TodoParaTuPerro/Views/Compras/CheckoutTarjetas.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcHJhc1xDaGVja291dFRhcmpldGFzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/BELLO3003/source/repos/GitHubTPTP/TodoParaTuPerro/Views/Compras/ComprarProductos.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcHJhc1xDb21wcmFyUHJvZHVjdG9zLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/BELLO3003/source/repos/GitHubTPTP/TodoParaTuPerro/Views/Compras/Compras.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcHJhc1xDb21wcmFzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/BELLO3003/source/repos/GitHubTPTP/TodoParaTuPerro/Views/Compras/EditarCategorias.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcHJhc1xFZGl0YXJDYXRlZ29yaWFzLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/BELLO3003/source/repos/GitHubTPTP/TodoParaTuPerro/Views/Compras/EditarProductos.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcHJhc1xFZGl0YXJQcm9kdWN0b3MuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/BELLO3003/source/repos/GitHubTPTP/TodoParaTuPerro/Views/Compras/EliminarCategorias.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcHJhc1xFbGltaW5hckNhdGVnb3JpYXMuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/BELLO3003/source/repos/GitHubTPTP/TodoParaTuPerro/Views/Compras/EliminarProductos.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcHJhc1xFbGltaW5hclByb2R1Y3Rvcy5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/BELLO3003/source/repos/GitHubTPTP/TodoParaTuPerro/Views/Compras/HacerCompra.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcHJhc1xIYWNlckNvbXByYS5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/BELLO3003/source/repos/GitHubTPTP/TodoParaTuPerro/Views/Compras/Productos.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcHJhc1xQcm9kdWN0b3MuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/BELLO3003/source/repos/GitHubTPTP/TodoParaTuPerro/Views/Compras/Proveedores.cshtml]
@@ -88,12 +68,36 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/BELLO3003/source/repos/GitHubTPTP/TodoParaTuPerro/Views/Login/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cTG9naW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/BELLO3003/source/repos/GitHubTPTP/TodoParaTuPerro/Views/Paqueteria/Pedidos.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFxdWV0ZXJpYVxQZWRpZG9zLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/BELLO3003/source/repos/GitHubTPTP/TodoParaTuPerro/Views/Paqueteria/Productos.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFxdWV0ZXJpYVxQcm9kdWN0b3MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/BELLO3003/source/repos/GitHubTPTP/TodoParaTuPerro/Views/Productos/AgregarProducto.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdG9zXEFncmVnYXJQcm9kdWN0by5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/BELLO3003/source/repos/GitHubTPTP/TodoParaTuPerro/Views/Productos/ComprarProductos.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdG9zXENvbXByYXJQcm9kdWN0b3MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/BELLO3003/source/repos/GitHubTPTP/TodoParaTuPerro/Views/Productos/EditarProductos.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdG9zXEVkaXRhclByb2R1Y3Rvcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/BELLO3003/source/repos/GitHubTPTP/TodoParaTuPerro/Views/Productos/EliminarProductos.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdG9zXEVsaW1pbmFyUHJvZHVjdG9zLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/BELLO3003/source/repos/GitHubTPTP/TodoParaTuPerro/Views/Productos/Productos.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdG9zXFByb2R1Y3Rvcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/BELLO3003/source/repos/GitHubTPTP/TodoParaTuPerro/Views/Shared/Error.cshtml]

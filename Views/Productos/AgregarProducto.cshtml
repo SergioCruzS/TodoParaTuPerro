@@ -12,49 +12,49 @@
     <form method="post" class="form-floating">
         <div class="form-group">
             <label>Nombre</label>
-            <input  class="form-control" asp-for=Nombre />
+            <input required  class="form-control" asp-for=Nombre />
             <span asp-validation-for="Nombre" class="text-danger"> </span>
         </div>
         <br />
 
         <div class="form-group">
             <label asp-for="Marca"></label>
-            <input  class="form-control" asp-for=Marca />
+            <input required class="form-control" asp-for=Marca />
             <span asp-validation-for="Marca" class="text-danger"> </span>
         </div>
         <br />
 
         <div class="form-group">
             <label asp-for="Descripcion"></label>
-            <input  class="form-control" asp-for=Descripcion />
+            <input required class="form-control" asp-for=Descripcion />
             <span asp-validation-for="Descripcion" class="text-danger"> </span>
         </div>
         <br />
 
         <div class="form-group">
             <label asp-for="Imagen">Ruta de Imagen</label>
-            <input  class="form-control" asp-for=Imagen />
+            <input required class="form-control" asp-for=Imagen />
             <span asp-validation-for="Imagen" class="text-danger"> </span>
         </div>
         <br />
 
         <div class="form-group">
             <label asp-for="Stock">En Stock</label>
-            <input  class="form-control" asp-for=Stock />
+            <input required class="form-control" asp-for=Stock />
             <span asp-validation-for="Stock" class="text-danger"> </span>
         </div>
         <br />
 
         <div class="form-group">
             <label asp-for="Inventario">En inventario</label>
-            <input  class="form-control" asp-for=Inventario />
+            <input required class="form-control" asp-for=Inventario />
             <span asp-validation-for="Inventario" class="text-danger"> </span>
         </div>
         <br />
 
         <div class="form-group">
             <label asp-for="Peso"></label>
-            <input  class="form-control" asp-for=Peso/>
+            <input required class="form-control" asp-for=Peso />
             <span asp-validation-for="Peso" class="text-danger"> </span>
         </div>
         <br />
@@ -62,21 +62,21 @@
 
         <div class="form-group">
             <label asp-for="PrecioVenta">Precio de Venta</label>
-            <input class="form-control" asp-for=PrecioVenta />
+            <input required class="form-control" asp-for=PrecioVenta />
             <span asp-validation-for="PrecioVenta" class="text-danger"> </span>
         </div>
         <br />
 
         <div class="form-group">
             <label asp-for="PrecioCompra">Precio de Compra</label>
-            <input  class="form-control" asp-for=PrecioCompra />
+            <input required class="form-control" asp-for=PrecioCompra />
             <span asp-validation-for="PrecioCompra" class="text-danger"> </span>
         </div>
         <br />
 
         <div class="form-group">
             <label asp-for="Descuento"></label>
-            <input class="form-control" asp-for=Descuento />
+            <input required class="form-control" asp-for=Descuento />
             <span asp-validation-for="Descuento" class="text-danger"> </span>
 
         </div>
@@ -84,7 +84,7 @@
 
         <div class="form-group">
             <label asp-for="Id_categoria">ID Categoría</label>
-            <input  class="form-control" asp-for=Id_categoria />
+            <input required class="form-control" asp-for=Id_categoria />
             <span asp-validation-for="Id_categoria" class="text-danger"> </span>
         </div>
         <br />
