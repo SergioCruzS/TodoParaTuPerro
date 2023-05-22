@@ -1,0 +1,200 @@
+﻿@model List<TodoParaTuPerro.Models.Paqueterias>;
+
+@{
+    ViewData["Title"] = "Paqueterias";
+    Layout = "~/Views/Shared/_LayoutAdministrador.cshtml";
+}
+
+<aside id="sidebar" class="sidebar">
+    <ul class="sidebar-nav" id="sidebar-nav">
+        <li class="nav-item">
+            <a class="nav-link " asp-area="" asp-controller="Paqueteria" asp-action="Pedidos">
+                <i class="bi bi-grid"></i>
+                <span>Pedidos sin enviar</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link " asp-area="" asp-controller="Paqueteria" asp-action="PedidosEnviados">
+                <i class="bi bi-grid"></i>
+                <span>Pedidos enviados</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link " asp-area="" asp-controller="Paqueteria" asp-action="PedidosCompletados">
+                <i class="bi bi-grid"></i>
+                <span>Pedidos completados</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link " asp-area="" asp-controller="Paqueteria" asp-action="Paqueterias">
+                <i class="bi bi-grid"></i>
+                <span>Paqueterías</span>
+            </a>
+        </li>
+    </ul>
+</aside>
+<main id="main" class="main">
+    <div class="container">
+        <h1 class="text-center mt-4">Administración de Paqueterías</h1>
+        <button class="btn btn-primary mt-4 mb-3" data-bs-toggle="modal" data-bs-target="#agregarModal">Agregar Paquetería</button>
+        <table class="table table-striped mt-4">
+            <thead>
+                <tr>
+                    <th scope="col">Nombre de la paquetería</th>
+                    <th scope="col">Dirección</th>
+                    <th scope="col">Costo de envío</th>
+                    <th scope="col">Tiempo de entrega</th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var paqueteria in Model)
+                {
+                    <tr>
+                        <td>@paqueteria.NombrePaqueteria</td>
+                        <td>@paqueteria.Direccion</td>
+                        <td>@paqueteria.CostoEnvio</td>
+                        <td>@paqueteria.TiempoEntrega</td>
+                        <td>
+                            <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#editarModal"
+                                    data-id="@paqueteria.IdPaqueteria" data-nombre="@paqueteria.NombrePaqueteria" data-direccion="@paqueteria.Direccion"
+                                    data-costo="@paqueteria.CostoEnvio" data-tiempoEntrega="@paqueteria.TiempoEntrega" onclick="abrirModalEditar(this)">
+                                Editar
+                            </button>
+                            <button class="btn btn-danger btn-sm" data-bs-toggle="modal"
+                                    data-bs-target="#eliminarModal" data-id="@paqueteria.IdPaqueteria" onclick="abrirModalEliminar(this)">
+                                Eliminar
+                            </button>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+        <!-- Modal para agregar -->
+        <div class="modal fade" id="agregarModal" tabindex="-1" aria-labelledby="agregarModalLabel"
+             aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="agregarModalLabel">Agregar Paquetería</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form method="post" asp-action="CrearPaqueteria">
+                            <div class="mb-3">
+                                <label for="nombreInput" class="form-label">Nombre de la paquetería</label>
+                                <input type="text" class="form-control" id="nombreInputAgregar" name="NombrePaqueteria">
+                            </div>
+                            <div class="mb-3">
+                                <label for="direccionInput" class="form-label">Dirección</label>
+                                <input type="text" class="form-control" id="direccionInputAgregar" name="Direccion">
+                            </div>
+                            <div class="mb-3">
+                                <label for="costoInput" class="form-label">Costo de envío</label>
+                                <input type="number" class="form-control" id="costoInputAgregar" name="CostoEnvio" step="any">
+                            </div>
+                            <div class="mb-3">
+                                <label for="tiempoInput" class="form-label">Tiempo de entrega</label>
+                                <input type="text" class="form-control" id="tiempoInputAgregar" name="TiempoEntrega">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                                <button type="submit" class="btn btn-primary">Agregar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal para editar -->
+        <div class="modal fade" id="editarModal" tabindex="-1" aria-labelledby="editarModalLabel"
+             aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="editarModalLabel">Editar Paquetería</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form method="post" asp-action="ActualizarPaqueteria">
+                            <input type="number" id="idInput" name="IdPaqueteria" hidden />
+                            <div class="mb-3">
+                                <label for="nombreInput" class="form-label">Nombre de la paquetería</label>
+                                <input type="text" class="form-control" id="nombreInput" name="NombrePaqueteria">
+                            </div>
+                            <div class="mb-3">
+                                <label for="direccionInput" class="form-label">Dirección</label>
+                                <input type="text" class="form-control" id="direccionInput" name="Direccion">
+                            </div>
+                            <div class="mb-3">
+                                <label for="costoInput" class="form-label">Costo de envío</label>
+                                <input type="number" class="form-control" id="costoInput" name="CostoEnvio" step="any">
+                            </div>
+                            <div class="mb-3">
+                                <label for="tiempoInput" class="form-label">Tiempo de entrega</label>
+                                <input type="text" class="form-control" id="tiempoInput" name="TiempoEntrega">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                                <button type="submit" class="btn btn-primary">Guardar cambios</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal para eliminar -->
+        <div class="modal fade" id="eliminarModal" tabindex="-1" aria-labelledby="eliminarModalLabel"
+             aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="eliminarModalLabel">Eliminar Paquetería</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>¿Estás seguro de que deseas eliminar esta paquetería?</p>
+                    </div>
+                    <form method="post" asp-action="EliminarPaqueteria">
+                        <div class="modal-footer">
+                            <input id="idInputEliminar" name="IdPaqueteria" hidden/>
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                            <button type="submit" class="btn btn-danger">Eliminar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</main>
+
+<script>
+    function abrirModalEditar(btnEditar) {
+        var id = btnEditar.getAttribute("data-id");
+        var nombre = btnEditar.getAttribute("data-nombre");
+        var direccion = btnEditar.getAttribute("data-direccion");
+        var costo = btnEditar.getAttribute("data-costo");
+        var entrega = btnEditar.getAttribute("data-tiempoEntrega");
+     
+        console.log(id);
+        console.log(nombre);
+        console.log(direccion);
+        console.log(costo);
+        console.log(entrega);
+        document.getElementById("idInput").value = id;
+        document.getElementById("nombreInput").value = nombre;
+        document.getElementById("direccionInput").value = direccion;
+        document.getElementById("costoInput").value = costo;
+        document.getElementById("tiempoInput").value = entrega;
+    }
+
+    function abrirModalEliminar(btnEliminar){
+        var id = btnEliminar.getAttribute("data-id");
+        console.log(id)
+        document.getElementById("idInputEliminar").value = id;
+    }
+</script>

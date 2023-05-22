@@ -1,0 +1,68 @@
+﻿@model List<TodoParaTuPerro.Models.Pedidos>;
+
+@{
+    ViewData["Title"] = "PedidosCompletados";
+    Layout = "~/Views/Shared/_LayoutAdministrador.cshtml";
+}
+
+<aside id="sidebar" class="sidebar">
+
+    <ul class="sidebar-nav" id="sidebar-nav">
+        <li class="nav-item">
+            <a class="nav-link " asp-area="" asp-controller="Paqueteria" asp-action="Pedidos">
+                <i class="bi bi-grid"></i>
+                <span>Pedidos sin enviar</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link " asp-area="" asp-controller="Paqueteria" asp-action="PedidosEnviados">
+                <i class="bi bi-grid"></i>
+                <span>Pedidos enviados</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link " asp-area="" asp-controller="Paqueteria" asp-action="PedidosCompletados">
+                <i class="bi bi-grid"></i>
+                <span>Pedidos completados</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link " asp-area="" asp-controller="Paqueteria" asp-action="Paqueterias">
+                <i class="bi bi-grid"></i>
+                <span>Paqueterías</span>
+            </a>
+        </li>
+    </ul>
+</aside>
+<main id="main" class="main">
+    <div class="container">
+        <h1 class="text-center mt-4">Pedidos completados</h1>
+        <table class="table table-striped mt-4">
+            <thead>
+                <tr>
+                    <th scope="col">No. de pedido</th>
+                    <th scope="col">Fecha del pedido</th>
+                    <th scope="col">No. de guía</th>
+                    <th scope="col">Paquetería</th>
+                    <th scope="col">Fecha de envío</th>
+                    <th scope="col">Fecha de entrega</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var pedido in Model)
+                {
+                    <tr>
+                        <td>@pedido.IdPedido</td>
+                        <td>@pedido.FechaPedido</td>
+                        <td>@pedido.NoGuia</td>
+                        <td>@pedido.Paqueteria</td>
+                        <td>@pedido.FechaEnvio</td>
+                        <td>@pedido.FechaEntrega</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</main>
+
+
