@@ -35,5 +35,10 @@ namespace TodoParaTuPerro.Models
         //[Required(ErrorMessage = "Escriba la ID del proveedor")]
         [Range(1, 999, ErrorMessage = "ID Invalido")]
         public int Id_proveedor { get; set; }
+
+
+        public string NombreProducto { get; set; }
+
+        public string NombreProveedor { get; set; }
     }
 }

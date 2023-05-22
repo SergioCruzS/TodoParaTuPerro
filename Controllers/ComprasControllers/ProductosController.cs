@@ -5,6 +5,7 @@ using System.Data.SqlClient;
 using TodoParaTuPerro.Models;
 using TodoParaTuPerro.Data;
 using System.Reflection;
+using System.Runtime.Serialization;
 
 namespace TodoParaTuPerro.Controllers.ComprasControllers
 {
@@ -109,6 +110,7 @@ namespace TodoParaTuPerro.Controllers.ComprasControllers
             if (productos.Descuento < 0 || productos.Descuento > 1)
             {
                 ModelState.AddModelError("Edad", "El campo Edad debe estar entre 0 y 1");
+                return View("AgregarProducto");
             }
             /*if (!ModelState.IsValid)
             {
@@ -261,10 +263,10 @@ namespace TodoParaTuPerro.Controllers.ComprasControllers
         //método GET para obtener los datos del registro seleccionado
         public IActionResult ComprarProductos(int id)
         {
-            if (!ModelState.IsValid)
+            /*if (!ModelState.IsValid)
             {
                 return View("ComprarProductos");
-            }
+            }*/
             using (SqlConnection con = new(Configuration["ConnectionStrings:DefaultConnection"]))
             {
                 ProductosModel registro = new();
@@ -313,7 +315,7 @@ namespace TodoParaTuPerro.Controllers.ComprasControllers
                         cmd.Parameters.Add("@PrecioArticulo ", System.Data.SqlDbType.Float).Value = productos.PrecioCompra;
                         cmd.Parameters.Add("@TotalCompra ", System.Data.SqlDbType.Float).Value = (productos.CantidadArticulos * productos.PrecioCompra);
                         cmd.Parameters.Add("@NumAutorizacion ", System.Data.SqlDbType.Int).Value = r.Next(100000, 999999);
-                        cmd.Parameters.Add("@Id_empleado ", System.Data.SqlDbType.Int).Value = productos.Id_empleado;
+                        cmd.Parameters.Add("@Id_empleado ", System.Data.SqlDbType.Int).Value = 1; //productos.Id_empleado;
                         cmd.Parameters.Add("@Id_producto ", System.Data.SqlDbType.Int).Value = productos.Id_producto;
                         cmd.Parameters.Add("@Id_proveedor ", System.Data.SqlDbType.Int).Value = productos.Id_proveedor;
                         con.Open();  //Abrimos la conexión

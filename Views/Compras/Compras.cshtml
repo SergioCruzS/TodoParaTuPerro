@@ -42,17 +42,19 @@
                 <thead>
                     <tr>
                         <th>Id</th>
-                        <th>Fecha de compra</th>
+                        <th><a asp-controller="Compras" asp-action="ComprasFecha"> Fecha de compra  </a></th>
                         <th>Direccion de envio</th>
                         <th>Fecha de entrega</th>
                         <th>Cantidad de articulos</th>
                         <th>Forma de pago</th>
                         <th>Precio del articulo</th>
-                        <th>Total de Compra</th>
+                        <th><a asp-controller="Compras" asp-action="ComprasTotal">Total de Compra </a></th>
                         <th>Numero de autorizacion</th>
                         <th>Id Empleado</th>
-                        <th>Id Producto</th>
-                        <th>Id Proveedor</th>
+                        <!--th>Id Producto</th-->
+                        <!--th>Id Proveedor</th-->
+                        <th>Nombre Producto</th>
+                        <th>Nombre Proveedor</th>
                     </tr>
                 </thead>
                 @{
@@ -73,8 +75,10 @@
                                 <td>@item.TotalCompra  </td>
                                 <td>@item.NumAutorizacion </td>
                                 <td>@item.Id_empleado  </td>
-                                <td>@item.Id_producto  </td>
-                                <td>@item.Id_proveedor  </td>
+                                <!--td>@item.Id_producto  </td-->
+                                <!--td>@item.Id_proveedor  </td-->
+                                <td>@item.NombreProducto  </td>
+                                <td>@item.NombreProveedor  </td>
                             </tr>
                         }
                     }

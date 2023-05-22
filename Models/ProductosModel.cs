@@ -45,7 +45,6 @@ namespace TodoParaTuPerro.Models
 
 
         //Datos para insertar compra en la Vista ComprarProductos
-
         public DateTime? FechaCompra { get; set; }
 
         public string? DireccionEnvio { get; set; }
@@ -70,13 +69,11 @@ namespace TodoParaTuPerro.Models
         public string NombreTarjeta { get; set; }
 
         //[MinLength(16, ErrorMessage = "Numero invalido")]
-        [Range(1000000000000000, 9999999999999999, ErrorMessage = "Numero invalido")]
-
+        //[Range(1000000000000000, 9999999999999999, ErrorMessage = "Numero invalido")]
         public int Tarjeta { get; set; }
 
         //[MinLength(5, ErrorMessage = "Numero invalido")]
         [Range(1000, 9999, ErrorMessage = "Numero invalido")]
-
         public int FechaTarjeta { get; set; }
 
         //[MinLength(3, ErrorMessage = "Numero invalido")]

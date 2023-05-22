@@ -1,4 +1,7 @@
-﻿namespace TodoParaTuPerro.Models
+﻿using System;
+using System.ComponentModel.DataAnnotations;
+
+namespace TodoParaTuPerro.Models
 {
     public class ProveedoresModel
     {

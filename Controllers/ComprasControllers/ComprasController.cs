@@ -11,7 +11,6 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace TodoParaTuPerro.Controllers.ComprasControllers
 {
-    [Authorize]
     public class ComprasController : Controller
     {
 
@@ -57,19 +56,109 @@ namespace TodoParaTuPerro.Controllers.ComprasControllers
                             TotalCompra = (float)Convert.ToDouble(dt.Rows[i][7]),
                             NumAutorizacion = Convert.ToInt32(dt.Rows[i][8]),
                             Id_empleado = Convert.ToInt32(dt.Rows[i][9]),
-                            Id_producto = Convert.ToInt32(dt.Rows[i][10]),
-                            Id_proveedor = Convert.ToInt32(dt.Rows[i][11]),
+                            //Id_producto = Convert.ToInt32(dt.Rows[i][10]),
+                            //Id_proveedor = Convert.ToInt32(dt.Rows[i][11]),
+                            NombreProducto = Convert.ToString(dt.Rows[i][10]),
+                            NombreProveedor = Convert.ToString(dt.Rows[i][11]),
                         });
                     }
-                    ViewBag.Compras = lista;
+
+                        ViewBag.Compras = lista;
                     con.Close();
                 }
                 return View();
             }
         }
 
-        //--------------------------------------- Login --------------------------------------------------------//
 
+        [Authorize(Roles = "Administrador,Supervisor,Compras")] //Autorizada sólo para estos roles de DA_Logica
+        public IActionResult ComprasFecha() //Método para mostrar la tabla ordenada de acuerdo a la fecha más antigua
+        {
+            using (SqlConnection con = new(Configuration["ConnectionStrings:DefaultConnection"]))
+            {
+                using (SqlCommand cmd = new("sp_TcomprasFecha", con))  //Ejecuta el procedimiento almacenado
+                {
+                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                    con.Open();
+                    SqlDataAdapter da = new(cmd); //Ejecutar la sentencia
+                    DataTable dt = new();  //Crear una tabla
+                    da.Fill(dt); //Llenamos la tabla con los datos que trae la consulta
+                    da.Dispose(); //.Disposed() lo que hace es liberar los recursos del sistema que esté utilizando el componente al que hace referencia
+                    List<ComprasModel> lista = new();
+
+                    for (int i = 0; i < dt.Rows.Count; i++)
+                    {
+                        lista.Add(new ComprasModel()
+                        {
+                            Id_compra = Convert.ToInt32(dt.Rows[i][0]),
+                            FechaCompra = ((DateTime)dt.Rows[i][1]),
+                            DireccionEnvio = Convert.ToString(dt.Rows[i][2]),
+                            FechaEntrega = ((DateTime)dt.Rows[i][3]),
+                            CantidadArticulos = Convert.ToInt32(dt.Rows[i][4]),
+                            FormaPago = Convert.ToString(dt.Rows[i][5]),
+                            PrecioArticulo = (float)Convert.ToDouble(dt.Rows[i][6]),
+                            TotalCompra = (float)Convert.ToDouble(dt.Rows[i][7]),
+                            NumAutorizacion = Convert.ToInt32(dt.Rows[i][8]),
+                            Id_empleado = Convert.ToInt32(dt.Rows[i][9]),
+                            //Id_producto = Convert.ToInt32(dt.Rows[i][10]),
+                            //Id_proveedor = Convert.ToInt32(dt.Rows[i][11]),
+                            NombreProducto = Convert.ToString(dt.Rows[i][10]),
+                            NombreProveedor = Convert.ToString(dt.Rows[i][11]),
+                        });
+                    }
+                    ViewBag.Compras = lista;
+                    con.Close();
+                }
+                return View("Compras");
+            }
+        }
+
+        [Authorize(Roles = "Administrador,Supervisor,Compras")] //Autorizada sólo para estos roles de DA_Logica
+        public IActionResult ComprasTotal() //Método para mostrar la tabla ordenada de acuerdo al Precio Total mas alto
+        {
+            using (SqlConnection con = new(Configuration["ConnectionStrings:DefaultConnection"]))
+            {
+                using (SqlCommand cmd = new("sp_TcomprasTotal", con))  //Ejecuta el procedimiento almacenado
+                {
+                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                    con.Open();
+                    SqlDataAdapter da = new(cmd); //Ejecutar la sentencia
+                    DataTable dt = new();  //Crear una tabla
+                    da.Fill(dt); //Llenamos la tabla con los datos que trae la consulta
+                    da.Dispose(); //.Disposed() lo que hace es liberar los recursos del sistema que esté utilizando el componente al que hace referencia
+                    List<ComprasModel> lista = new();
+
+                    for (int i = 0; i < dt.Rows.Count; i++)
+                    {
+                        lista.Add(new ComprasModel()
+                        {
+                            Id_compra = Convert.ToInt32(dt.Rows[i][0]),
+                            FechaCompra = ((DateTime)dt.Rows[i][1]),
+                            DireccionEnvio = Convert.ToString(dt.Rows[i][2]),
+                            FechaEntrega = ((DateTime)dt.Rows[i][3]),
+                            CantidadArticulos = Convert.ToInt32(dt.Rows[i][4]),
+                            FormaPago = Convert.ToString(dt.Rows[i][5]),
+                            PrecioArticulo = (float)Convert.ToDouble(dt.Rows[i][6]),
+                            TotalCompra = (float)Convert.ToDouble(dt.Rows[i][7]),
+                            NumAutorizacion = Convert.ToInt32(dt.Rows[i][8]),
+                            Id_empleado = Convert.ToInt32(dt.Rows[i][9]),
+                            //Id_producto = Convert.ToInt32(dt.Rows[i][10]),
+                            //Id_proveedor = Convert.ToInt32(dt.Rows[i][11]),
+                            NombreProducto = Convert.ToString(dt.Rows[i][10]),
+                            NombreProveedor = Convert.ToString(dt.Rows[i][11]),
+                        });
+                    }
+                    ViewBag.Compras = lista;
+                    con.Close();
+                }
+                return View("Compras");
+            }
+        }
+
+
+
+        //--------------------------------------- Login --------------------------------------------------------//
+        [AllowAnonymous]
         public IActionResult Login()
         {
             return RedirectToAction("Index", "Login");
@@ -96,34 +185,8 @@ namespace TodoParaTuPerro.Controllers.ComprasControllers
         [Authorize(Roles = "Administrador,Supervisor,Compras")] //Autorizada sólo para estos roles de DA_Logica
         public IActionResult Proveedores()
         {
-            using (SqlConnection con = new(Configuration["ConnectionStrings:DefaultConnection"]))
-            {
-                using (SqlCommand cmd = new("sp_Tproveedores", con))  //Ejecuta el procedimiento almacenado
-                {
-                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                    con.Open();
-                    SqlDataAdapter da = new(cmd); //Ejecutar la sentencia
-                    DataTable dt = new();  //Crear una tabla
-                    da.Fill(dt); //Llenamos la tabla con los datos que trae la consulta
-                    da.Dispose(); //.Disposed() lo que hace es liberar los recursos del sistema que esté utilizando el componente al que hace referencia
-                    List<ProveedoresModel> lista = new();
-
-                    for (int i = 0; i < dt.Rows.Count; i++)
-                    {
-                        lista.Add(new ProveedoresModel()
-                        {
-                            Id_proveedor = Convert.ToInt32(dt.Rows[i][0]),
-                            Nombre = Convert.ToString(dt.Rows[i][1]),
-                            Direccion = Convert.ToString(dt.Rows[i][2]),
-                        });
-                    }
-                    ViewBag.Proveedores = lista;
-                    con.Close();
-                }
-                return View();
-            }
+            return RedirectToAction("Proveedores", "Proveedores");
         }
-
     }
 }
 
@@ -205,4 +268,26 @@ namespace TodoParaTuPerro.Controllers.ComprasControllers
                 return View(registro);
             }
         }
+
+
+
+using (SqlCommand cmd2 = new("sp_Tproductos", con))  //Ejecuta el procedimiento almacenado
+{
+    cmd.CommandType = System.Data.CommandType.StoredProcedure;
+    SqlDataAdapter da2 = new(cmd); //Ejecutar la sentencia
+    DataTable dt2 = new();  //Crear una tabla
+    da2.Fill(dt); //Llenamos la tabla con los datos que trae la consulta
+    da2.Dispose(); //.Disposed() lo que hace es liberar los recursos del sistema que esté utilizando el componente al que hace referencia
+    List<ComprasModel> lista2 = new();
+
+    for (int i = 0; i < dt2.Rows.Count; i++)
+    {
+        lista2.Add(new ComprasModel()
+        {
+            Nombre = Convert.ToString(dt.Rows[i][12])
+,
+        });
+    }
+}
+
  */

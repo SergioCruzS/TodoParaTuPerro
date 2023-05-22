@@ -8,7 +8,7 @@
 <main id="main" class="main">
     <h1>Realizar compra</h1>
     <br />
-    <form method="post" class="form-floating">
+    <form method="post" class="form-floating" asp-controller="Productos" asp-action="ComprarProductos">
         <div style="width:40%; float: left">
             <div class="form-group">
                 <label asp-for="CantidadArticulos">Cantidad a comprar</label>
@@ -39,8 +39,8 @@
             <br />
 
             <div class="form-group">
-                <label asp-for="Id_empleado">ID del empleado</label>
-                <input required class="form-control" asp-for=Id_empleado />
+                <!--label asp-for="Id_empleado">ID del empleado</label-->
+                <input hidden required class="form-control" asp-for=Id_empleado />
                 <span asp-validation-for="Id_empleado" class="text-danger"> </span>
             </div>
             <br />
@@ -60,7 +60,7 @@
             <div class="form-group">
                 <label asp-for="Tarjeta" class="text-warning">Tarjeta</label>
                 <input required class="form-control" asp-for=Tarjeta />
-                <span asp-validation-for="Tarjeta" class="text-danger"> </span>
+                <!--span asp-validation-for="Tarjeta" class="text-danger"> </span-->
             </div>
             <br />
             <div class="form-group">
@@ -110,13 +110,13 @@
                 </div>
                 <span class="text-success">GRATIS</span>
             </li>
-                <li class="list-group-item d-flex justify-content-between lh-condensed">
+                <!--li class="list-group-item d-flex justify-content-between lh-condensed">
                     <div>
                         <small class="text-muted">
                             Total: <input readonly class="form-control" asp-for=TotalCompra />
                         </small>
                     </div>
-                </li>
+                </li-->
         </ul>
             <div class="text-center panel-body">
                 <button type="submit" class="btn btn-sm btn-primary">Confirmar Compra</button>

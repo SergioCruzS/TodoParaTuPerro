@@ -40,20 +40,8 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmlhc1xFbGltaW5hckNhdGVnb3JpYXMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/BELLO3003/source/repos/GitHubTPTP/TodoParaTuPerro/Views/Compras/CheckoutTarjetas.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcHJhc1xDaGVja291dFRhcmpldGFzLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/BELLO3003/source/repos/GitHubTPTP/TodoParaTuPerro/Views/Compras/Compras.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcHJhc1xDb21wcmFzLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/BELLO3003/source/repos/GitHubTPTP/TodoParaTuPerro/Views/Compras/HacerCompra.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcHJhc1xIYWNlckNvbXByYS5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/BELLO3003/source/repos/GitHubTPTP/TodoParaTuPerro/Views/Compras/Proveedores.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcHJhc1xQcm92ZWVkb3Jlcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/BELLO3003/source/repos/GitHubTPTP/TodoParaTuPerro/Views/Error/Error404.cshtml]
@@ -98,6 +86,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/BELLO3003/source/repos/GitHubTPTP/TodoParaTuPerro/Views/Productos/Productos.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdG9zXFByb2R1Y3Rvcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/BELLO3003/source/repos/GitHubTPTP/TodoParaTuPerro/Views/Proveedores/Proveedores.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvdmVlZG9yZXNcUHJvdmVlZG9yZXMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/BELLO3003/source/repos/GitHubTPTP/TodoParaTuPerro/Views/Shared/Error.cshtml]
