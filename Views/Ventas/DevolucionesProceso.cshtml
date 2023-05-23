@@ -1,5 +1,5 @@
 ﻿@{
-    ViewData["Title"] = "Historial Ventas";
+    ViewData["Title"] = "DevolucionesProceso";
     Layout = "~/Views/Shared/_LayoutAdministrador.cshtml";
 }
 
@@ -27,18 +27,31 @@
     </ul>
 </aside>
 <main id="main" class="main">
-    <h4>Ventas</h4>
+    <div>
+        <h4>
+            <select name="select">
+                <option value="value1">Devoluciones finalizadas</option>
+                <option value="value2">Devoluciones en proceso</option>
+                <option value="value3">Devoluciones negadas</option>
+            </select>
+        </h4>
+
+        <label>
+            <input type="checkbox" id="cbox1" value="first_checkbox" />
+            Productos dañados
+        </label>
+        <br />
+    </div><!---->
     <table class="table">
         <thead>
             <tr>
-                <th>No. de Venta</th>
+                <th>Id. Venta</th>
                 <th>Producto</th>
                 <th>Marca</th>
-                <th>Cantidad Vendida</th>
-                <th>Fecha de envío</th>
-                <th>Estatus</th>
+                <th>Fecha de la venta</th>
                 <th>Id. Cliente</th>
-                <!-- <th></th>  Columna para el botón -->
+                <th>Detalles</th>
+                <th></th> <!--Columna para el botón-->
             </tr>
         </thead>
         <tbody>
@@ -46,13 +59,23 @@
                 <td>9875315</td>
                 <td>Croqueta cachorro</td>
                 <td>Pedigree</td>
-                <td>10</td>
                 <td>10/02/2023</td>
-                <td>En curso</td>
                 <td>1234</td>
-                <!--<td>
-                    <button type="button" class="btn btn-primary">Ver detalles</button>
-                </td>-->
+                <td>
+                    <p>
+                        El producto...
+                    </p>
+                </td>
+                <td>
+                    <ul>
+                        <li>
+                            <button type="button" class="btn btn-primary">Autorizar</button>
+                        </li>
+                        <li>
+                            <button type="button" class="btn btn-primary">Rechazar</button>
+                        </li>
+                    </ul>
+                </td>
             </tr>
         </tbody>
     </table>
