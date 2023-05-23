@@ -21,7 +21,7 @@ namespace TodoParaTuPerro.Controllers.PaqueteriaControllers
                 ListaPaqueterias = listaPaqueterias
             };
             
-            return View(listaPedidos);
+            return View(modelo);
         }
 
         [HttpPost]

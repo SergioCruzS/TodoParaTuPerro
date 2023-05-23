@@ -179,12 +179,7 @@
         var direccion = btnEditar.getAttribute("data-direccion");
         var costo = btnEditar.getAttribute("data-costo");
         var entrega = btnEditar.getAttribute("data-tiempoEntrega");
-     
-        console.log(id);
-        console.log(nombre);
-        console.log(direccion);
-        console.log(costo);
-        console.log(entrega);
+
         document.getElementById("idInput").value = id;
         document.getElementById("nombreInput").value = nombre;
         document.getElementById("direccionInput").value = direccion;
@@ -194,7 +189,6 @@
 
     function abrirModalEliminar(btnEliminar){
         var id = btnEliminar.getAttribute("data-id");
-        console.log(id)
         document.getElementById("idInputEliminar").value = id;
     }
 </script>

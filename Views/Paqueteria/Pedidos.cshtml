@@ -1,5 +1,5 @@
 ﻿@using TodoParaTuPerro.Models;
-@model List<TodoParaTuPerro.Models.Pedidos>;
+@model TodoParaTuPerro.Models.PedidosPaqueteriaModel;
 
 @{
     ViewData["Title"] = "Pedidos";
@@ -49,7 +49,7 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach (var pedido in Model)
+                @foreach (var pedido in Model.ListaPedidos)
                 {
                     <tr>
                         <td>@pedido.IdPedido</td>
@@ -96,10 +96,10 @@
                             <div class="mb-3">
                                 <label for="paqueteriaSelect" class="form-label">Paquetería:</label>
                                 <select class="form-select" id="paqueteriaSelect" name="Paqueteria">
-                                    <option value="fedex" selected>FedEx</option>
-                                    <option value="dhl">DHL</option>
-                                    <option value="ups">UPS</option>
-                                    <option value="estafeta">Estafeta</option>
+                                    @foreach(var paqueteria in Model.ListaPaqueterias)
+                                    {
+                                        <option value="@paqueteria.NombrePaqueteria">@paqueteria.NombrePaqueteria</option>
+                                    }
                                 </select>
                             </div>
                             <div class="mb-3">

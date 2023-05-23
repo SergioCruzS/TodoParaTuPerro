@@ -12,5 +12,6 @@ namespace TodoParaTuPerro.Controllers.Datos
 
         public DbSet<Pedidos> Pedidos { get; set; }
         public DbSet<Paqueterias> Paqueterias { get; set; }
+        public DbSet<Empleados> Empleados { get; set; }
     }
 }
