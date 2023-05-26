@@ -1,8 +1,7 @@
-﻿@using TodoParaTuPerro.Models;
-@model TodoParaTuPerro.Models.PedidosPaqueteriaModel;
+﻿@model List<TodoParaTuPerro.Models.Pedidos>;
 
 @{
-    ViewData["Title"] = "Pedidos";
+    ViewData["Title"] = "PedidosEnviados";
     Layout = "~/Views/Shared/_LayoutAdministrador.cshtml";
 }
 
@@ -36,7 +35,7 @@
 </aside>
 <main id="main" class="main">
     <div class="container">
-        <h1 class="text-center mt-4">Pedidos no enviados</h1>
+        <h1 class="text-center mt-4">Pedidos enviados</h1>
         <table class="table table-striped mt-4">
             <thead>
                 <tr>
@@ -45,11 +44,12 @@
                     <th scope="col">No. de guía</th>
                     <th scope="col">Paquetería</th>
                     <th scope="col">Fecha de envío</th>
+                    <th scope="col">Fecha de entrega</th>
                     <th scope="col"></th>
                 </tr>
             </thead>
             <tbody>
-                @foreach (var pedido in Model.ListaPedidos)
+                @foreach (var pedido in Model)
                 {
                     <tr>
                         <td>@pedido.IdPedido</td>
@@ -57,9 +57,11 @@
                         <td>@pedido.NoGuia</td>
                         <td>@pedido.Paqueteria</td>
                         <td>@pedido.FechaEnvio</td>
+                        <td>@pedido.FechaEntrega</td>
                         <td>
                             <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editarModal"
-                                    data-id="@pedido.IdPedido" data-fecha="@pedido.FechaPedido" data-guia="@pedido.NoGuia" onclick="abrirModalEditar(this)">
+                                    data-id="@pedido.IdPedido" data-fecha="@pedido.FechaPedido" data-guia="@pedido.NoGuia"
+                                    data-paqueteria="@pedido.Paqueteria" data-fechaEnvio="@pedido.FechaEnvio" onclick="abrirModalEditar(this)">
                                 Editar
                             </button>
                         </td>
@@ -69,7 +71,7 @@
         </table>
 
         <!-- Modal -->
-        <div class="modal fade" id="editarModal" tabindex="-1" aria-labelledby="editarModalLabel" aria-hidden="false">
+        <div class="modal fade" id="editarModal" tabindex="-1" aria-labelledby="editarModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -77,42 +79,42 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <form method="post" asp-action="ActualizarGuia">
+                        <form method="post" asp-action="ActualizarEntrega">
                             <div class="mb-3">
-                                <label for="pedidoId" class="form-label">No. de pedido:</label>
-                                <input id="pedidoId" name="IdPedido" hidden>
-                                <h6 id="pedidoIdh6"></h6>
+                                <label for="pedidoInput" class="form-label">No. de pedido:</label>
+                                <h6 id="pedidoId"></h6>
+                                <input id="pedidoIdInput" name="IdPedido" hidden>
                             </div>
                             <div class="mb-3">
-                                <label for="fechaPedido" class="form-label">Fecha del pedido:</label>
-                                <input id="fechaPedido" name="FechaPedido" hidden/>
-                                <h6 id="fechaPedidoh6"></h6>
+                                <label for="fechaPedidoInput" class="form-label">Fecha del pedido:</label>
+                                <h6 id="fechaPedido"></h6>
+                                <input id="fechaPedidoInput" name="FechaPedido" hidden>
                             </div>
                             <div class="mb-3">
                                 <label for="guiaInput" class="form-label">No. de guía:</label>
-                                <input type="text" class="form-control" id="guiaInput" name="NoGuia">
-                                <span id="errorGuia"></span>
+                                <h6 id="guia"></h6>
+                                <input id="guiaInput" name="NoGuia" hidden>
                             </div>
                             <div class="mb-3">
                                 <label for="paqueteriaSelect" class="form-label">Paquetería:</label>
-                                <select class="form-select" id="paqueteriaSelect" name="Paqueteria">
-                                    @foreach(var paqueteria in Model.ListaPaqueterias)
-                                    {
-                                        <option value="@paqueteria.NombrePaqueteria">@paqueteria.NombrePaqueteria</option>
-                                    }
-                                </select>
+                                <h6 id="paqueteria"></h6>
+                                <input id="paqueteriaInput" name="Paqueteria" hidden>
                             </div>
                             <div class="mb-3">
                                 <label for="fechaEnvioInput" class="form-label">Fecha de envío:</label>
-                                <input type="date" class="form-control" id="fechaEnvioInput" name="FechaEnvio">
+                                <h6 id="fechaEnvio"></h6>
+                                <input id="fechaEnvioInput" name="FechaEnvio" hidden>
+                            </div>
+                            <div class="mb-3">
+                                <label for="fechaEntregaInput" class="form-label">Fecha de entrega:</label>
+                                <input type="date" class="form-control" id="fechaEntregaInput" name="FechaEntrega">
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                                <button type="submit" class="btn btn-primary" onclick="validar()">Guardar cambios</button>
+                                <button type="submit" class="btn btn-primary">Guardar cambios</button>
                             </div>
                         </form>
                     </div>
-                    
                 </div>
             </div>
         </div>
@@ -124,10 +126,18 @@
         var pedidoId = btnEditar.getAttribute("data-id");
         var fechaPedido = btnEditar.getAttribute("data-fecha");
         var guia = btnEditar.getAttribute("data-guia");
-        document.getElementById("pedidoId").value = pedidoId;
-        document.getElementById("fechaPedido").value = fechaPedido;
+        var paqueteria = btnEditar.getAttribute("data-paqueteria");
+        var fechaEnvio = btnEditar.getAttribute("data-fechaEnvio");
+        document.getElementById("pedidoId").innerText = pedidoId;
+        document.getElementById("fechaPedido").innerText = fechaPedido;
+        document.getElementById("guia").innerText = guia;
+        document.getElementById("paqueteria").innerText = paqueteria;
+        document.getElementById("fechaEnvio").innerText = fechaEnvio;
+
+        document.getElementById("pedidoIdInput").value = pedidoId;
+        document.getElementById("fechaPedidoInput").value = fechaPedido;
         document.getElementById("guiaInput").value = guia;
-        document.getElementById("pedidoIdh6").innerText = pedidoId;
-        document.getElementById("fechaPedidoh6").innerText = fechaPedido;
+        document.getElementById("paqueteriaInput").value = paqueteria;
+        document.getElementById("fechaEnvioInput").value = fechaEnvio;
     }
 </script>
